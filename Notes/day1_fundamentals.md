@@ -39,3 +39,30 @@ Colors are represented using intensity values from 0 to 255.
 ## OpenCV Color Format
 
 OpenCV uses BGR instead of RGB.
+
+## Pixels
+
+An image is made of pixels.
+
+Pixels are arranged in rows and columns.
+
+A pixel can be accessed using: img[0,0]
+
+## Grayscale Images
+
+A grayscale image stores only brightness information instead of color information.
+
+Pixel values range from:
+
+- 0 = Black
+- 255 = White
+
+Grayscale images use a single channel instead of three color channels.
+
+---
+
+### Converting a Color Image to Grayscale
+
+```python
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+``
