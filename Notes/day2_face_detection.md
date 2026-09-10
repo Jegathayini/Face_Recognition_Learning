@@ -222,3 +222,125 @@ Increasing this value can reduce false positives but may also miss some real fac
 - Face detection returns face coordinates.
 - False positives can occur.
 - minNeighbors helps control detection strictness.
+
+---
+
+## scaleFactor
+
+The `scaleFactor` parameter controls how much the detection window size increases after each scan.
+
+Example:
+
+```python
+scaleFactor = 1.1
+```
+
+Meaning:
+
+```text
+100% Current Size
++
+10% Increase
+=
+110% New Size
+```
+
+Smaller values:
+
+- More accurate detection
+- Slower processing
+
+Larger values:
+
+- Faster processing
+- May miss some faces
+
+Typical value:
+
+```python
+1.1
+```
+
+---
+
+## Real-Time Face Detection
+
+Face detection can be performed on webcam frames instead of static images.
+
+OpenCV accesses a webcam using:
+
+```python
+camera = cv2.VideoCapture(0)
+```
+
+A frame is captured using:
+
+```python
+success, frame = camera.read()
+```
+
+Workflow:
+
+```text
+Webcam
+↓
+Capture Frame
+↓
+Convert To Grayscale
+↓
+Detect Face
+↓
+Draw Rectangle
+↓
+Display Frame
+```
+
+The process continues until the program is stopped.
+
+---
+
+## Frame
+
+A frame is a single image captured from a webcam or video stream.
+
+Example:
+
+```python
+success, frame = camera.read()
+```
+
+Returns:
+
+- success -> indicates whether frame capture succeeded
+- frame -> captured image
+
+A video is made up of multiple frames displayed rapidly.
+
+```text
+Frame 1
+↓
+Frame 2
+↓
+Frame 3
+↓
+Frame 4
+↓
+Video Stream
+```
+
+Frames can be processed just like images.
+
+---
+
+## Key Takeaways
+
+- Face Detection locates faces but does not identify people.
+- Haar Cascade is a pre-trained face detection model.
+- Grayscale images improve detection performance.
+- detectMultiScale() scans images at multiple sizes.
+- scaleFactor controls search window size growth.
+- minNeighbors controls detector strictness.
+- Face detection returns face coordinates.
+- False positives can occur.
+- Frames are images captured from a webcam or video stream.
+- Real-time face detection processes frames continuously.
