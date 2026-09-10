@@ -21,11 +21,15 @@ faces = face_detector.detectMultiScale(
 
 for (x, y, w, h) in faces:
 
+    print(
+        f"x={x}, y={y}, w={w}, h={h}"
+    )
+
     cv2.rectangle(
         img,
         (x, y),
-        (x + w, y + h),
-        (0, 255, 0),
+        (x+w, y+h),
+        (0,255,0),
         3
     )
     # Draw rectangle around detected face.
