@@ -1,0 +1,5 @@
+Face Detection:
+Determines whether a face is present and returns its location.
+
+Face Recognition:
+Identifies whose face is present by comparing facial features.
