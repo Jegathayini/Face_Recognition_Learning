@@ -1,3 +1,2 @@
 import mediapipe as mp
-
-print(dir(mp.tasks))
+print(mp.tasks.vision.FaceDetector)
