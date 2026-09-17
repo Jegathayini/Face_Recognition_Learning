@@ -3,7 +3,7 @@ import numpy as np
 
 # Load employee image.
 image = cv2.imread(
-    "Known_Faces/jegathayini_pic.jpeg"
+    "Known_Faces/jegathayini_pic.jpg"
 )
 
 # Check whether image exists.
