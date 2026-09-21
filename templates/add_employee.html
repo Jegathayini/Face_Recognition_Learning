@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Add Employee</title>
 </head>
-
 <body>
 
     <h1>Add Employee</h1>
 
-    <form
-        action="/add_employee"
-        method="POST"
-      <input
-            type="text"
-            name="name"
-            required>
+    <form action="/add_employee"
+          el>
+        <br>
+
+        <input type="text"
+               name="name"
+               required>
 
         <br><br>
 
         <label>Photo</label>
         <br>
 
-        <input
-            type="file"
-            name="image"
-            accept="image/*"
-            required>
+        <input type="file"
+               name="image"
+               accept="image/*"
+               required>
 
         <br><br>
 
@@ -37,5 +34,4 @@
     </form>
 
 </body>
-
 </html>
